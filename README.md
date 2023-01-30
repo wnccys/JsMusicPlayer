@@ -1,2 +1,4 @@
-# JsMusicPlayer
-music player made with js and css
+# JS Music Player
+
+### Used Tools: 
+> HTML, JS, Materialize CSS;
