@@ -1,4 +1,2 @@
-# JS Music Player
-
-### Used Tools: 
-> HTML, JS, Materialize CSS;
+# Used Tools:
+> HTML, Materialize CSS and JS;
