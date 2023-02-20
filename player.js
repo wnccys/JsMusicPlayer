@@ -7,6 +7,16 @@ window.player = {
     currentAudio: {},
     currentPlaying: 0,
     start(){
+        this.update();
+        this.audio.onended = () => this.next();
+    },
+    next(){
+        this.currentPlaying++;
+
+        if (this.currentPlaying == this.audioData.length) this.restart();
+        this.update();        
+    },
+    update() {
         this.currentAudio = this.audioData[this.currentPlaying];
 
         this.cover.style.background = `url('${path(
@@ -16,13 +26,10 @@ window.player = {
         this.artist.innerText = this.currentAudio.artist;
         this.audio.src = path(this.currentAudio.file);
 
-        this.audio.addEventListener("ended", () => {
-        
-        })
+        this.audio.onended = () => this.next();
     },
-    next(){
-        this.currentPlaying++;
-        this.audio.src = path(this.audioData[currentPlaying].file);
-        this.audio.play();  
+    restart(){
+        this.currentPlaying = 0;
+        this.update();
     }
 };
