@@ -14,7 +14,8 @@ window.player = {
         this.currentPlaying++;
 
         if (this.currentPlaying == this.audioData.length) this.restart();
-        this.update();        
+        this.update();
+        this.audio.play();        
     },
     update() {
         this.currentAudio = this.audioData[this.currentPlaying];
