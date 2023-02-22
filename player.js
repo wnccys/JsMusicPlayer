@@ -1,10 +1,6 @@
 import audios from "./data.js";
 import { path } from "./utils.js";
 export default {
-    cover: document.querySelector(".card-image"),
-    title: document.querySelector(".card-content h5"),
-    artist: document.querySelector(".artist"),
-    audio: document.querySelector("audio"),
     audioData: audios,
     currentAudio: {},
     currentPlaying: 0,
