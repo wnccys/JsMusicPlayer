@@ -1,5 +1,5 @@
 import audios from "./data.js";
-
+import path from "./utils";
 export default {
     cover: document.querySelector(".card-image"),
     title: document.querySelector(".card-content h5"),
