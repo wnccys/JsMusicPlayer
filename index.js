@@ -1,8 +1,3 @@
-import player from "./player.js"
-
-const path = function(file){
-    return `assets/${file}`;
-};
-
+import player from "./player.js";
 
 window.addEventListener("load", player.start());
