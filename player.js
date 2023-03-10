@@ -27,9 +27,7 @@ export default {
             )}') no-repeat center center / cover`;
         this.title.innerText = this.currentAudio.title;
         this.artist.innerText = this.currentAudio.artist;
-        this.audio.src = path(this.currentAudio.file);
-
-        this.audio.onended = () => this.next();
+        elements.createAudioElement.call(this, path(this.currentAudio.file));
     },
     restart(){
         this.currentPlaying = 0;
