@@ -1,5 +1,5 @@
 export default [
-    {
+{
     title: "Long Time",
     artist: "Playboi Carti",
     cover: "longtime.jpg",

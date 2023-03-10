@@ -6,18 +6,37 @@ export default {
     audioData: audios,
     currentAudio: {},
     currentPlaying: 0,
+    isPlaying: false,
     start(){
         elements.get.call(this);
+        elements.actions.call(this);
         
         this.update();
         this.audio.onended = () => this.next();
+    },
+    play (){
+        this.isPlaying = true;
+        this.audio.togglePlayPause();
+        this.PlayPause.innerText = "pause";
+    },
+    pause () {
+        this.isPlaying = false;
+        this.audio.togglePlayPause();
+        this.playPause.innerText = "play_arrow"; 
+    },
+    togglePlayPause() {
+        if (this.isPlaying){
+            this.pause();
+        }
+        else {
+            this.play();
+        }
     },
     next(){
         this.currentPlaying++;
 
         if (this.currentPlaying == this.audioData.length) this.restart();
-        this.update();
-        this.audio.play();        
+        this.update();      
     },
     update() {
         this.currentAudio = this.audioData[this.currentPlaying];
