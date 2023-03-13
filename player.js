@@ -9,7 +9,6 @@ export default {
     isPlaying: false,
     start(){
         elements.get.call(this);
-        elements.actions.call(this);
         
         this.update();
         this.audio.onended = () => this.next();
@@ -58,7 +57,10 @@ export default {
         this.title.innerText = this.currentAudio.title;
         this.artist.innerText = this.currentAudio.artist;
         elements.createAudioElement.call(this, path(this.currentAudio.file));
-        this.seekbar.max = this.audio.duration;
+        
+        this.audio.onloadeddata = () => {
+            elements.actions.call(this);
+        };
     },
     restart(){
         this.currentPlaying = 0;
