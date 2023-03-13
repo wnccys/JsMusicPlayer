@@ -1,5 +1,5 @@
 import audios from "./data.js";
-import { path } from "./utils.js";
+import { path, secToMin } from "./utils.js";
 import elements from "./playerElements.js";
 
 export default {
@@ -47,6 +47,10 @@ export default {
     setSeek(value)
     {
         this.audio.currentTime = value;
+    },
+    timeUpdate(){
+        this.currentDuration.innerText = secToMin(this.audio.currentTime);
+        this.seekbar.value = this.audio.currentTime;
     },
     update(){
         this.currentAudio = this.audioData[this.currentPlaying];
