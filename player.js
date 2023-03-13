@@ -19,7 +19,7 @@ export default {
         this.audio.play();
         this.playPause.innerText = "pause";
     },
-    pause () {
+    pause (){
         this.isPlaying = false;
         this.audio.pause();
         this.playPause.innerText = "play_arrow"; 
@@ -42,7 +42,10 @@ export default {
         if (this.currentPlaying == this.audioData.length) this.restart();
         this.update();      
     },
-    update() {
+    setVolume(value){
+        this.audio.volume = value / 100;
+    },
+    update(){
         this.currentAudio = this.audioData[this.currentPlaying];
 
         this.cover.style.background = `url('${path(
