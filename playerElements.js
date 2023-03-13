@@ -1,3 +1,5 @@
+import { secToMin } from "./utils.js";
+
 export default {
     get() {
         this.cover = document.querySelector(".card-image");
@@ -21,6 +23,6 @@ export default {
         this.seekbar.oninput = () => this.setSeek(this.seekbar.value);
         this.seekbar.onchange = () => this.setSeek(this.seekbar.value);
         this.seekbar.max = this.audio.duration;
-        this.totalDuration.innetText = this.audio.duration;
+        this.totalDuration.innetText = secToMin(this.audio.duration);
     }
 };
