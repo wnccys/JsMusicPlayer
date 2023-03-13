@@ -45,6 +45,10 @@ export default {
     setVolume(value){
         this.audio.volume = value / 100;
     },
+    setSeek(value)
+    {
+        this.audio.currentTime = value;
+    },
     update(){
         this.currentAudio = this.audioData[this.currentPlaying];
 
@@ -54,6 +58,7 @@ export default {
         this.title.innerText = this.currentAudio.title;
         this.artist.innerText = this.currentAudio.artist;
         elements.createAudioElement.call(this, path(this.currentAudio.file));
+        this.seekbar.max = this.audio.duration;
     },
     restart(){
         this.currentPlaying = 0;
