@@ -16,12 +16,12 @@ export default {
     },
     play (){
         this.isPlaying = true;
-        this.audio.togglePlayPause();
-        this.PlayPause.innerText = "pause";
+        this.audio.play();
+        this.playPause.innerText = "pause";
     },
     pause () {
         this.isPlaying = false;
-        this.audio.togglePlayPause();
+        this.audio.pause();
         this.playPause.innerText = "play_arrow"; 
     },
     togglePlayPause() {
