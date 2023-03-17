@@ -1,0 +1,43 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: #e63946;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 30vh 50vh 30vh;
+    grid-template-areas:    ". . ."
+                            ". w ."
+                            ". . .";
+    grid-gap: 30px;
+}
+
+.wrapper {
+    width: 100%;
+    min-width: 350px;
+    
+    grid-area: w;
+    background: #f1faee;
+}
+
+.title{
+    height: 15%;
+    background: white;
+    text-align: center;
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.img {
+    background: #1D3557;
+    height: 60%;
+}
+
+#player{
+    background: #A8DADC;
+    height: 25%;
+}
+
+#audio {
+    background: black;
+}
