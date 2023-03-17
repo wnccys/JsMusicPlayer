@@ -1,4 +1,4 @@
-export default [
+window.data = [
 {
     title: "Long Time",
     artist: "Playboi Carti",
