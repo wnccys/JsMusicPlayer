@@ -5,11 +5,11 @@ body {
     background: #e63946;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 30vh 50vh 30vh;
+    grid-template-rows: 20vh 60vh 20vh;
     grid-template-areas:    ". . ."
                             ". w ."
                             ". . .";
-    grid-gap: 30px;
+    grid-gap: 0px;
 }
 
 .wrapper {
