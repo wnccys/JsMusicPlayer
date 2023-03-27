@@ -9,7 +9,6 @@ body {
     grid-template-areas:    ". . ."
                             ". w ."
                             ". . .";
-    grid-gap: 0px;
 }
 
 .wrapper {
@@ -31,10 +30,18 @@ body {
 
 .img {
     background: #1D3557;
-    height: 60%;
+    height: 55%;
 }
 
-#player{
+.audio-player{
     background: #A8DADC;
-    height: 25%;
+}
+
+.data-player{
+    padding: 0px;
+    margin: 0px;
+}
+
+#seekbar{
+    width: 50%;
 }
