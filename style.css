@@ -30,7 +30,7 @@ body {
 
 .img {
     background: #1D3557;
-    height: 55%;
+    height: 50%;
 }
 
 .audio-player{
@@ -38,10 +38,27 @@ body {
 }
 
 .data-player{
+    background-color: bisque;
     padding: 0px;
     margin: 0px;
 }
 
 #seekbar{
-    width: 50%;
+    width: 38%;
+} 
+
+#volume_ctrl{
+    width: 5vw;
+}
+
+h4{
+    font-size: 40px;
+    margin: 0;
+    padding: 0;
+}
+p{
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 2px;
 }
