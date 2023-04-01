@@ -73,3 +73,7 @@ p{
     font-size: 25px;
     padding-bottom: 4px;
 }
+
+#current_duration{
+    padding-left: 7px;
+}
