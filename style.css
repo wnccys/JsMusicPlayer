@@ -17,8 +17,10 @@ body {
 
 .wrapper {
     width: 100%;
-    min-width: 350px;
+    min-width: 365px;
     max-width: 400px;
+    min-height: 350px;
+
     
     grid-area: w;
     background: #f1faee;
@@ -26,7 +28,7 @@ body {
 
 .title{
     height: 13%;
-    background: white;
+    min-height: 50px;
     text-align: center;
     font-size: 50px;
     font-family: var(--font);
@@ -37,12 +39,7 @@ body {
     height: 50%;
 }
 
-.audio-player{
-    background: #A8DADC;
-}
-
-.data-player{
-    background-color: bisque;
+.player-data{
     padding: 0px;
     margin: 0px;
 }
@@ -54,7 +51,13 @@ body {
 #volume-ctrl{
     width: 6vw;
 }
-h4,p{
+
+#audio-player{
+    min-height: 200px;
+
+}
+
+h4, p{
     margin: 0;
     padding: 0;
     font-family: var(--font);
