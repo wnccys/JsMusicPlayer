@@ -48,11 +48,11 @@ body {
     width: 45%;
 } 
 
-#volume-ctrl{
+#volume_ctrl{
     width: 6vw;
 }
 
-#audio-player{
+#audio_player{
     min-height: 200px;
 
 }
