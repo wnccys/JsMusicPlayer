@@ -10,7 +10,9 @@ export default {
         update();
     },
     update(){
-        this.currentAudio = this.audioData[this.currentPlayer]
+        this.currentAudio = this.audioData[this.currentPlayer];
         elements.createAudioElement.call(this, path(this.currentAudio));
+
+        this.audio.play();
     }
 }

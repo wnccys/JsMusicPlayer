@@ -37,6 +37,8 @@ body {
 .img {
     background: #1D3557;
     height: 50%;
+    position: relative;
+    z-index: 1;
 }
 
 .player-data{
@@ -45,16 +47,17 @@ body {
 }
 
 .play_button{
-    display: block;
+    display: grid;
+    justify-content: center;
+    align-content: center;
 	width:60px;
 	height:60px;
-	bottom:40px;
-	right:40px;
+	bottom:60px;
+	right:60px;
 	background-color:#0C9;
 	color:#FFF;
-	border-radius:50px;
-	text-align:center;
-	box-shadow: 2px 2px 3px #999;
+	border-radius: 100px;
+    text-align: center;
 }
 
 #seekbar{
@@ -89,4 +92,12 @@ p{
 
 #current_duration{
     padding-left: 7px;
+}
+
+#btn{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
 }
