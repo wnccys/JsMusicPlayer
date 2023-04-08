@@ -20,7 +20,7 @@ body {
     min-width: 365px;
     max-width: 400px;
     min-height: 350px;
-    box-shadow: .2px .5px 2px #6c757d;
+    box-shadow: 1.5px 1.5px 2px #6c757d;
     grid-area: w;
     background: #dee2e6;
 }
@@ -48,9 +48,9 @@ body {
 .play_button{
     background-color: #212529;
     border: none;
-    border-radius: 100px;
+    border-radius: 200px;
     color: white;
-    padding: 15px 25px;
+    padding: 30px 35px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -97,6 +97,6 @@ p{
     position: absolute;
     bottom: 0;
     right: 0;
-    padding-right: 30px;
-    padding-bottom: 15px;
+    padding-right: 0px;
+    padding-bottom: 0px;
 }
