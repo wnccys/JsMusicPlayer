@@ -38,7 +38,7 @@ body {
 }
 
 .img {
-    background: #adb5bd;
+    background: url(assets/rainonme.jpg) no-repeat center center / cover;
     height: 50%;
     position: relative;
     z-index: 1;
