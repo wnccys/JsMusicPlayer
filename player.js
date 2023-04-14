@@ -8,12 +8,18 @@ export default {
     currentPlaying: 0,
 
     start(){
-        update();
+        elements.properties.call(this);
+
+        this.update();
     },
+
     update(){
         this.currentAudio = this.audioData[this.currentPlaying];
-        elements.createAudioElement.call(this, path(this.currentAudio));
+        this.image.style.background = `url('${path(
+            this.currentAudio.cover
+            )}') no-repeat center center / cover `;
 
-        this.audio.play();
+        elements.createAudioElement.call(this, path(this.currentAudio.file));
+
     }
 }
