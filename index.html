@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>MusicPlayer</title>
@@ -25,7 +28,7 @@
         </div>
         <div class="audio_player">
             <i id="current_duration">00:00</i>
-            <input type="range" name="" min="0" max="100" id="seekbar"> 
+            <input type="range" name="" min="0" max="100" step="1" id="seekbar"> 
             <i id="total_duration">00:00</i>
             <i class="material-icons" id="vol_icon">volume_up</i>
             <input type="range" min=0 max=100 id="volume_ctrl">      
