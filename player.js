@@ -1,5 +1,6 @@
 import audios from "data.js";
-import { path } from "utils.js"
+import { path } from "utils.js";
+import elements from "playerElements.js";
 
 export default {
     audioData: audios,
@@ -10,7 +11,7 @@ export default {
         update();
     },
     update(){
-        this.currentAudio = this.audioData[this.currentPlayer];
+        this.currentAudio = this.audioData[this.currentPlaying];
         elements.createAudioElement.call(this, path(this.currentAudio));
 
         this.audio.play();

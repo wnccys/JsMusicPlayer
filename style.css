@@ -68,12 +68,18 @@ body {
 } 
 
 #volume_ctrl{
-    width: 6vw;
+    max-width: 5vw;
+    min-width: 30px;
+    padding-right: 4px;
 }
 
 #audio_player{
     min-height: 200px;
 
+}
+
+#vol_icon{
+    transform: translateY(4px);
 }
 
 h4, p{
@@ -95,6 +101,10 @@ p{
 #current_duration{
     padding-left: 7px;
     
+}
+
+#total_duration {
+    padding-right: 10px;
 }
 
 #btn{
