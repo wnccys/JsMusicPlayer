@@ -34,7 +34,6 @@ body {
     min-height: 50px;
     text-align: center;
     font-size: 50px;
-    font-family: var(--font);
 }
 
 .img {
@@ -94,8 +93,8 @@ h4{
 }
 
 p{
-    font-size: 25px;
-    padding-bottom: 4px;
+    font-size: 30px;
+    transform: translateY(-12px);
 }
 
 #current_duration{
