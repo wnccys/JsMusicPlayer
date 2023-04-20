@@ -48,7 +48,7 @@ body {
     margin: 0px;
 }
 
-.play_button{
+.play-button{
     background-color: #212529;
     border: none;
     border-radius: 200px;
@@ -66,18 +66,18 @@ body {
     width: 45%;
 } 
 
-#volume_ctrl{
+#volume-ctrl{
     max-width: 5vw;
     min-width: 30px;
     padding-right: 4px;
 }
 
-#audio_player{
+#audio-player{
     min-height: 200px;
 
 }
 
-#vol_icon{
+#vol-icon{
     transform: translateY(4px);
 }
 
@@ -97,12 +97,12 @@ p{
     transform: translateY(-12px);
 }
 
-#current_duration{
+#current-duration{
     padding-left: 7px;
     
 }
 
-#total_duration {
+#total-duration {
     padding-right: 10px;
 }
 

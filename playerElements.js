@@ -4,7 +4,7 @@ export default {
         this.title = document.querySelector("#music");
         this.artist = document.querySelector("#artist"); 
         this.seekbar = document.querySelector("#seekbar");
-        this.playPause = document.querySelector(".play_button");
+        this.playPause = document.querySelector(".play-button");
     },
     createAudioElement(audio) {
         this.audio = new Audio(audio);
