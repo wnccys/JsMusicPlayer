@@ -1,13 +1,12 @@
-import audios from "data.js";
-import { path } from "utils.js";
-import elements from "playerElements.js";
+import audios from "./data.js";
+import { path } from "./utils.js";
+import elements from "./playerElements.js";
 
 export default {
     audioData: audios,
     currentAudio: {},
     currentPlaying: 0,
     isPlaying: false,
-
     start(){
         elements.properties.call(this);
 
@@ -15,11 +14,11 @@ export default {
     },
     play(){
         this.audio.play();
-        isPlaying = true;
+        this.isPlaying = true;
     },
     pause(){
         this.audio.pause();
-        isPlaying = false;
+        this.isPlaying = false;
     },
     togglePlayPause(){
         this.isPlaying ? this.pause() : this.play();
