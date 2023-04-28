@@ -1,3 +1,5 @@
+import {secToMin} from "./utils.js";
+
 export default {
     properties(){
         this.image = document.querySelector(".img");
@@ -15,6 +17,6 @@ export default {
     actions(){
         this.playPause.onclick = () => this.togglePlayPause();
         this.volIcon.onclick = () => this.mute();
-        this.totalDuration.innerText = this.audio.duration;
+        this.totalDuration.innerText = secToMin(this.audio.duration);
     }
 }
