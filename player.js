@@ -11,18 +11,42 @@ export default {
         elements.properties.call(this);
 
         this.update();
-        this.audio.onended = () => this.repeat();
+        this.audio.onended = () => this.next();
     },
     play(){
         this.audio.play();
         this.isPlaying = true;
+    
+        this.playButton.innerText = "pause";
     },
     pause(){
         this.audio.pause();
         this.isPlaying = false;
+
+        this.playButton.innerText = "play_arrow";
     },
     togglePlayPause(){
         this.isPlaying ? this.pause() : this.play();
+    },
+    mute(){
+        if (this.audio.muted){
+            this.audio.muted = false;
+            this.volIcon.innerText = "volume_up";
+        }
+        else{
+            this.audio.muted = true;
+            this.volIcon.innerText = "volume_off";
+        }
+    },
+    next(){
+        if (this.currentPlaying == this.audioData.length)
+        {
+            this.repeat();
+        }
+        else{
+            currentPlaying++;
+            this.update();
+        }
     },
     update(){
         this.currentAudio = this.audioData[this.currentPlaying];
@@ -39,7 +63,7 @@ export default {
         }
     },
     repeat(){
-        this.currentPlaying++;
+        this.currentPlaying = 0;
         this.update();
     }
 }

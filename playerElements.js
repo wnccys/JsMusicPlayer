@@ -14,6 +14,7 @@ export default {
     },
     actions(){
         this.playPause.onclick = () => this.togglePlayPause();
-
+        this.volIcon.onclick = () => this.mute();
+        this.totalDuration.innerText = this.audio.duration;
     }
 }
