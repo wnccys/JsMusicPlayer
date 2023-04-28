@@ -4,12 +4,16 @@ export default {
         this.title = document.querySelector("#music");
         this.artist = document.querySelector("#artist"); 
         this.seekbar = document.querySelector("#seekbar");
+        this.volIcon = document.querySelector("#vol-icon");
         this.playPause = document.querySelector(".play-button");
+        this.totalDuration = document.querySelector("#total-duration");
+        this.currentDuration = document.querySelector("#current-duration");
     },
     createAudioElement(audio) {
         this.audio = new Audio(audio);
     },
     actions(){
-        this.playPause.onclick = this.togglePlayPause();
+        this.playPause.onclick = () => this.togglePlayPause();
+
     }
 }

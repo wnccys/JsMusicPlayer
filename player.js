@@ -11,6 +11,7 @@ export default {
         elements.properties.call(this);
 
         this.update();
+        this.audio.onended = () => this.repeat();
     },
     play(){
         this.audio.play();
@@ -36,5 +37,9 @@ export default {
         this.audio.onloadeddata = () => {
             elements.actions.call(this);
         }
+    },
+    repeat(){
+        this.currentPlaying++;
+        this.update();
     }
 }
