@@ -7,7 +7,7 @@ export default {
         this.artist = document.querySelector("#artist"); 
         this.seekbar = document.querySelector("#seekbar");
         this.volIcon = document.querySelector("#vol-icon");
-        this.playPause = document.querySelector(".play-button");
+        this.playPause = document.querySelector(".play-button i");
         this.totalDuration = document.querySelector("#total-duration");
         this.currentDuration = document.querySelector("#current-duration");
     },

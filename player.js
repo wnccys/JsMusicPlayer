@@ -17,13 +17,13 @@ export default {
         this.audio.play();
         this.isPlaying = true;
     
-        this.playButton.innerText = "pause";
+        this.playPause.innerText = "pause";
     },
     pause(){
         this.audio.pause();
         this.isPlaying = false;
 
-        this.playButton.innerText = "play_arrow";
+        this.playPause.innerText = "play_arrow";
     },
     togglePlayPause(){
         this.isPlaying ? this.pause() : this.play();
