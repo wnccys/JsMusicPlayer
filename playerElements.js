@@ -7,6 +7,7 @@ export default {
         this.artist = document.querySelector("#artist"); 
         this.seekbar = document.querySelector("#seekbar");
         this.volIcon = document.querySelector("#vol-icon");
+        this.volCtrl = document.querySelector("#vol-ctrl");
         this.playPause = document.querySelector(".play-button i");
         this.totalDuration = document.querySelector("#total-duration");
         this.currentDuration = document.querySelector("#current-duration");
@@ -18,5 +19,10 @@ export default {
         this.playPause.onclick = () => this.togglePlayPause();
         this.volIcon.onclick = () => this.mute();
         this.totalDuration.innerText = secToMin(this.audio.duration);
+        this.seekbar.max = this.audio.duration;
+        this.audio.ontimeupdate = () => this.setDuration();
+        this.seekbar.oninput = () => {
+            this.audio.currentTime = this.seekbar.value;
+        };
     }
 }

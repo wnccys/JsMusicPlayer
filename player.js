@@ -38,6 +38,10 @@ export default {
             this.volIcon.innerText = "volume_off";
         }
     },
+    setDuration(){ 
+        this.seekbar.value = this.audio.currentTime;
+        this.currentDuration.innerText = secToMin(this.audio.currentTime);
+    },
     next(){
         if (this.currentPlaying == this.audioData.length)
         {
