@@ -23,6 +23,7 @@ export default {
         this.audio.ontimeupdate = () => this.setDuration();
         this.seekbar.oninput = () => {
             this.audio.currentTime = this.seekbar.value;
+            this.currentDuration.innerText = secToMin(this.audio.currentTime);
         };
     }
 }

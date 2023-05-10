@@ -1,5 +1,5 @@
 import audios from "./data.js";
-import { path } from "./utils.js";
+import { path, secToMin } from "./utils.js";
 import elements from "./playerElements.js";
 
 export default {
@@ -48,8 +48,9 @@ export default {
             this.repeat();
         }
         else{
-            currentPlaying++;
+            this.currentPlaying++;
             this.update();
+            this.audio.play();
         }
     },
     update(){
