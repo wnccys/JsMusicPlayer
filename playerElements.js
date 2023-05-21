@@ -25,5 +25,8 @@ export default {
             this.audio.currentTime = this.seekbar.value;
             this.currentDuration.innerText = secToMin(this.audio.currentTime);
         };
+        this.volCtrl.oninput = () => {
+            this.audio.volume = (this.volCtrl.value/100);
+        }
     }
 }

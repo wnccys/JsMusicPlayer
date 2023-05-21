@@ -70,7 +70,7 @@ input[type = "range"]{
     transform: translateY(3px);
 }
 
-#volume-ctrl{
+#vol-ctrl{
     max-width: 5vw;
     min-width: 30px;
 }

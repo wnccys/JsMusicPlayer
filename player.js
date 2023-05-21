@@ -43,15 +43,15 @@ export default {
         this.currentDuration.innerText = secToMin(this.audio.currentTime);
     },
     next(){
-        if (this.currentPlaying == this.audioData.length)
+        if (this.currentPlaying == this.audioData.length-1) // FIXNEEDED ///////////////
         {
             this.repeat();
         }
         else{
             this.currentPlaying++;
             this.update();
-            this.audio.play();
         }
+        this.audio.play();
     },
     update(){
         this.currentAudio = this.audioData[this.currentPlaying];
